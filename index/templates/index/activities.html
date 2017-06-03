@@ -1,0 +1,61 @@
+{% extends 'index/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="future_past" style="margin-left:220px">
+<div><span id="future">Анонс</span><span id="past">Прошедшее</span></div>
+
+
+{% for post in activities %}
+{% if post.section == 'Announce' %}
+<div class="future" id="news1">
+<h3>{{ post.title }}</h3>
+<p>{{ post.text|safe|escape }}</p>
+</div>
+{% endif %}
+{% endfor %}
+
+{% for post in activities %}
+{% if post.section == 'Past' %}
+<div class="past" id="news2">
+<h3>{{ post.title }}</h3>
+<p>{{ post.text }}</p>
+</div>
+{% endif %}
+{% endfor %}
+
+</div>
+<style>
+.future_past span {margin-right:40px}
+
+#past {border-bottom:dashed 1px #8c99ba; cursor:pointer}
+
+.past {display:none}
+</style>
+<script>
+$('#past').click(
+                   function() {
+                                 $('.future').css({'display':'none'});
+                                 $('.past').css({'display':'block'});
+
+                                 $('#future').css({'border-bottom':'dashed 1px #8c99ba'});
+                                 $('#future').css({'cursor':'pointer'});
+
+                                 $('#past').css({'border-bottom':'none'});
+                                 $('#past').css({'cursor':'default'});
+                              }
+                );
+
+$('#future').click(
+                   function() {
+                                 $('.past').css({'display':'none'});
+                                 $('.future').css({'display':'block'});
+
+                                 $('#past').css({'border-bottom':'dashed 1px #8c99ba'});
+                                 $('#past').css({'cursor':'pointer'});
+
+                                 $('#future').css({'border-bottom':'none'});
+                                 $('#future').css({'cursor':'default'});
+                              }
+                );
+</script>
+{% endblock content %}

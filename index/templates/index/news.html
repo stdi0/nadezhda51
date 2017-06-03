@@ -1,0 +1,73 @@
+{% extends 'index/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div style="margin-left:220px">
+
+<table>
+<tr>
+<td style="padding-right:50px"><span class="news_span" id="news1" style="cursor:pointer; border-bottom:1px #cc3375 dashed; color:#cc3375">Документы</span></td>
+<td style="padding-right:50px"><span class="news_span" id="news2" style="cursor:pointer; color:#193375; border-bottom:1px #193375 dashed">События</span></td>
+<td style="padding-right:50px"><span class="news_span" id="news3" style="cursor:pointer; color:#193375; border-bottom:1px #193375 dashed">Анонсы</span></td>
+<td><span class="news_span" id="news4" style="cursor:pointer; color:#193375; border-bottom:1px #193375 dashed">Ссылки</span></td>
+</tr>
+</table>
+<br>
+
+{% for post in news %}
+{% if post.section == 'Docs' %}
+<div class="news_div" id="news1">
+<h3>{{ post.title }}</h3>
+<p><i><small>{{ post.created_date }}</small></i></p>
+<p>{{ post.text|safe|escape }}</p>
+</div>
+{% endif %}
+{% endfor %}
+
+{% for post in news %}
+{% if post.section == 'Events' %}
+<div style="display:none" class="news_div" id="news2">
+<h3>{{ post.title }}</h3>
+<p><i><small>{{ post.created_date }}</small></i></p>
+<p>{{ post.text|safe|escape }}</p>
+</div>
+{% endif %}
+{% endfor %}
+
+{% for post in news %}
+{% if post.section == 'Announce' %}
+<div style="display:none" class="news_div" id="news3">
+<h3>{{ post.title }}</h3>
+<p><i><small>{{ post.created_date }}</small></i></p>
+<p>{{ post.text|safe|escape }}</p>
+</div>
+{% endif %}
+{% endfor %}
+
+{% for post in news %}
+{% if post.section == 'Links' %}
+<div style="display:none" class="news_div" id="news4">
+<h3>{{ post.title }}</h3>
+<p><i><small>{{ post.created_date }}</small></i></p>
+<p>{{ post.text|safe|escape }}</p>
+</div>
+{% endif %}
+{% endfor %}
+
+
+
+</div>
+
+<script>
+$('.news_span').click(
+                        function() {
+                                      $('.news_span').css({'border-bottom':'dashed 1px #193375'});
+                                      $('.news_span').css({'color':'#193375'});
+                                      $('span#' + $(this).attr('id')).css({'border-bottom':'dashed 1px #cc3375'});
+                                      $('span#' + $(this).attr('id')).css({'color':'#cc3375'});
+                                      $('.news_div').css({'display':'none'});
+                                      $('div#' + $(this).attr('id')).css({'display':'block'});
+                                   }
+                     );
+</script>
+
+{% endblock content %}

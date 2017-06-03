@@ -1,0 +1,14 @@
+{% extends 'index/base.html' %}
+{% load thumbnail %}
+{% load staticfiles %}
+{% block content %}
+<div style="margin-left:220px">
+{% if images %}
+	{% for image in images %}
+	{% thumbnail image "100x100" crop="center" as im %}
+	<a href="{{ image }}"><img src="{{ im.url }}"></a>
+	{% endthumbnail %}
+	{% endfor %}
+{% endif %}
+</div>
+{% endblock content %}

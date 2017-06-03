@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>  
+<head>
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<script type="text/javascript" src="{% static 'javascript/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascript/jquery-ui.js' %}"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+</head>
+<body style="background-image: url({% static 'images/background.png' %});">
+<div class="top" style="background-image: url({% static 'images/top2.png' %});">
+<div class="text">
+СОЦИАЛЬНО-БЛАГОТВОРИТЕЛЬНЫЙ КЛУБ<br>
+РОДИТЕЛЕЙ И ДЕТЕЙ-ИНВАЛИДОВ<br>
+<span>&laquo;НАДЕЖДА&raquo;</span>
+</div>
+<div class="logotype"><img src="{% static 'images/logotype.png' %}" alt="" align="top"></div>
+<div class="help"><img src="{% static 'images/help.png' %}" alt="" align="top"></div>
+</div>
+<div class="b1a3374"></div>
+<div class="content">
+<div class="left">
+<div class="menu"><a href="{% url 'about' %}">О клубе</a></div>
+<div class="menu"><a href="{% url 'news' %}">Новости</a></div>
+<div class="menu"><a href="{% url 'albom' %}">Фотоальбом</a></div>
+<div class="menu"><a href="{% url 'activities' %}">Мероприятия</a></div>
+<div class="menu"><a href="{% url 'projects' %}">Проекты в действии</a></div>
+<div class="menu"><a href="{% url 'details' %}">Реквизиты</a></div>
+<div class="menu"><a href="{% url 'people' %}">Наши люди</a></div>
+<div class="menu"><a href="{% url 'reviews' %}">Отзывы</a></div>
+<div class="menu"><a href="{% url 'thanks' %}">Благодарности</a></div>
+<div class="photo">
+<div><img src="{% static 'images/1.jpg' %}" alt="" align="top"></div>
+<div><img src="{% static 'images/2.jpg' %}" alt="" align="top"></div>
+</div>
+</div>
+{% block content %}
+{% endblock %}
+<div style="clear:both"></div>
+</div>
+<div class="details">
+<table>
+<tr class="h1">
+<td>Контакты</td>
+<td>Реквизиты</td>
+<td>Карта сайта</td>
+</tr>
+<tr>
+<td><img src="{% static 'images/details.png' %}" alt="" align="top"></td>
+<td><img src="{% static 'images/details.png' %}" alt="" align="top"></td>
+<td><img src="{% static 'images/details.png' %}" alt="" align="top"></td>
+</tr>
+<tr valign="top">
+<td>
+<nobr>Россия. 183025, г. Мурманск,</nobr><br>
+<nobr>ул. Полярные зори, д. 41/4,</nobr><br>
+<nobr>тел/факс, (8-815-2) 44-35-79</nobr><br>
+<nobr>E-mail: sbknadezhda@yandex.ru</nobr>
+</td>
+<td>
+<nobr>Р/с 40703810341120001142</nobr><br>
+<nobr>мурманский ОСБ № 8627</nobr><br>
+<nobr>БИК 044705615</nobr><br>
+<nobr>ИНН 5191110970</nobr><br>
+<nobr>КПП 519001001</nobr><br>
+<nobr>К/с 30101810300000000615</nobr>
+</td>
+<td>
+<nobr>О клубе</nobr><br>
+<nobr>Новости</nobr><br>
+<nobr>Фотоальбом</nobr><br>
+<nobr>Мероприятия</nobr><br>
+<nobr>Проекты в действии</nobr><br>
+<nobr>Реквизиты</nobr><br>
+<nobr>Наши люди</nobr><br>
+<nobr>Отзывы</nobr><br>
+<nobr>Благодарности</nobr>
+</td>
+</tr>
+</table>
+</div>
+<div class="bottom">Общественная организация Мурманский социально-благотворительный клуб родителей и детей-инвалидов «НАДЕЖДА» © 2015</div>
+</body>
+</html>

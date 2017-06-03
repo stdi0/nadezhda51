@@ -1,0 +1,12 @@
+{% extends 'index/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div style="margin-left:220px">
+{% for post in projects %}
+<h3>{{ post.title }}</h3>
+<p>{{ post.text|safe|escape }}</p>
+{% endfor %}
+<style>
+h3 a {color:red}
+</style>
+{% endblock content %}
