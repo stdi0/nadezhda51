@@ -20,7 +20,7 @@ def albom(request):
     return render(request, 'index/albom.html')
 
 def photo(request, photo_folder):
-    directory = os.getcwd() + '/index/static/images/photo/' + photo_folder
+    directory = os.getcwd() + '/nadezhda51/index/static/images/photo/' + photo_folder
     files = os.listdir(directory)
     images = list(filter(lambda x: x.endswith('.jpg'), files))
     for key, value in enumerate(images):
