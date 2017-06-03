@@ -24,7 +24,7 @@ def photo(request, photo_folder):
     files = os.listdir(directory)
     images = list(filter(lambda x: x.endswith('.jpg'), files))
     for key, value in enumerate(images):
-        images[key] = 'http://localhost:8000/static/images/photo/' + photo_folder + '/' + value
+        images[key] = 'http://localhost/static/images/photo/' + photo_folder + '/' + value
     context = {'images': images}
     return render(request, 'index/photo.html', context)
 
