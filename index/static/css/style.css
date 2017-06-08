@@ -2,19 +2,21 @@
 
 body {color:#193375; margin:0px; font-family:'PT Sans'; font-size:11pt}
 
-.top {width:940px; height:199px; margin:0px auto; position:relative}
+.top {width:940px; height:284px; margin:0px auto; position:relative}
 
-.top .logotype {width:150px; height:136px; position:absolute; right:37px; bottom:51px}
+.top .logotype {width:150px; height:136px; position:absolute; right:68px; bottom:100px}
 
-.top .help {width§:150px; height:36px; position:absolute; right:37px; bottom:17px}
+.top .social {width:160px; height:52px; position:absolute; left:37px; bottom:30px}
+
+.top .help {width:203px; height:45px; position:absolute; right:37px; bottom:30px}
 
 .top .text {color:#1a3471; font-size:20pt; font-weight:bold; position:absolute; left:40px; top:40px}
 
 .top .text span {font-size:40pt}
 
-.b1a3374 {width:940px; height:35px; background:#1a3374; margin:0px auto}
+.b1a3374 {width:940px; height:53px; margin:0px auto;}
 
-.content {width:848px; margin:0px auto; background:white; padding:28px 62px 28px 30px; box-shadow:0px 13px 13px #9BDAF4}
+.content {width:848px; margin:0px auto; background:white; padding:28px 62px 28px 30px;}
 
 .content p, .content ul {line-height:20px}
 
@@ -22,7 +24,7 @@ body {color:#193375; margin:0px; font-family:'PT Sans'; font-size:11pt}
 
 .content .left .menu {font-size:13pt; padding:12px 12px; border-bottom:solid 2px #e7e7e7}
 
-.content .left .menu:hover {background:#ebf8fd}
+.content .left .menu:hover {background:#f9ff78}
 
 .content .left .menu a {text-decoration:none; display:block; color:#193375}
 
@@ -32,11 +34,11 @@ body {color:#193375; margin:0px; font-family:'PT Sans'; font-size:11pt}
 
 .content .right {margin-left:220px}
 
-.content .right .left1 {margin-right:2px; float:left; height:410px; width:174px; background:#9bdaf4; border-radius:4px; padding:12px 17px; font-size:9pt; line-height:12pt}
+.content .right .left1 {margin-right:2px; float:left; height:410px; width:174px; background:#7dede6; border-radius:4px; padding:12px 17px; font-size:9pt; line-height:12pt}
 
-.content .right .right1 {margin-right:2px; float:left; height:410px; width:174px; background:#9bdaf4; border-radius:4px; padding:12px 17px; font-size:9pt; line-height:12pt}
+.content .right .right1 {margin-right:2px; float:left; height:410px; width:174px; background:#7dede6; border-radius:4px; padding:12px 17px; font-size:9pt; line-height:12pt}
 
-.content .right .right2 {float:left; height:410px; width:174px; background:#9bdaf4; border-radius:4px; padding:12px 17px; font-size:9pt; line-height:12pt}
+.content .right .right2 {float:left; height:410px; width:174px; background:#7dede6; border-radius:4px; padding:12px 17px; font-size:9pt; line-height:12pt}
 
 .content .right .left1 a,
 .content .right .right1 a,
@@ -52,7 +54,7 @@ body {color:#193375; margin:0px; font-family:'PT Sans'; font-size:11pt}
 
 h3, h4 {color:#FF0000}
 
-.details {background:#9bdaf4; padding:38px}
+.details {background:#7dede6; padding:38px}
 
 .details table {margin:0px auto; width:850px}
 
