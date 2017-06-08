@@ -8,7 +8,11 @@ body {color:#193375; margin:0px; font-family:'PT Sans'; font-size:11pt}
 
 .top .social {width:160px; height:52px; position:absolute; left:37px; bottom:30px}
 
-.top .help {width:203px; height:45px; position:absolute; right:37px; bottom:30px}
+.top .help {border-radius: 5px; width:203px; height:45px; position:absolute; right:37px; bottom:30px; background: #ff0000;}
+
+.help:hover {background: #ff5c5c;}
+
+.transition {transition: 0.3s;}
 
 .top .text {color:#1a3471; font-size:20pt; font-weight:bold; position:absolute; left:40px; top:40px}
 
