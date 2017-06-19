@@ -2,6 +2,15 @@
 {% load staticfiles %}
 {% block content %}
 <div style="margin-left:220px">
-<p>Раздел совсем скоро заработает.</p>
+<form name="mailex" method="post" ectype="text/plain" action="mailto:sbknadezhda@yandex.ru">
+ 
+<p>Сообщение:</p><textarea rows="15" cols="75" name="text"></textarea>
+ 
+<p>Ваш E-mail:</p>
+<input type="text" name="email" id="email2"/>
+ 
+<p><input type="submit" name="submit" value="Отправить" /></p>
+ 
+</form>
 </div>
 {% endblock content %}
