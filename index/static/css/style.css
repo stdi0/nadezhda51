@@ -4,11 +4,11 @@ body {color:#193375; margin:0px; font-family:'PT Sans'; font-size:11pt}
 
 .top {width:940px; height:284px; margin:0px auto; position:relative}
 
-.top .logotype {width:150px; height:136px; position:absolute; right:68px; bottom:100px}
+.top .logotype {width:264px; height:263px; position:absolute; right:32px; bottom:7px}
 
-.top .social {width:160px; height:52px; position:absolute; left:37px; bottom:30px}
+.top .social {width:300px; height:52px; position:absolute; left:37px; bottom:30px}
 
-.top .help {border-radius: 5px; width:203px; height:45px; position:absolute; right:37px; bottom:30px; background: #ff0000;}
+.top .help {border-radius: 5px; width:203px; height:45px; background: #ff0000; position:absolute; left:170px; bottom:33px;}
 
 .help:hover {background: #ff5c5c;}
 
